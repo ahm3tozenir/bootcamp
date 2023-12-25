@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="row">
+    <div><input type="text" [(ngModel)]="nameInp" /></div>
+    <div><input type="text" [(ngModel)]="surnameInp" /></div>
+    <div><input type="text" [(ngModel)]="brandInp" /></div>
+    <div><input type="number" [(ngModel)]="ageInp" /></div>
+  </div>
+  <button class="btn" (click)="add()">ekle</button>
+</div>
+<div *ngFor="let student of studentList" class="wrapper">
+  <div class="row" *ngIf="student.shouldShowElement">
+    <button (click)="change(student.id)">edit</button>
+    <div>{{ student.name }}</div>
+    <div>{{ student.surname }}</div>
+    <div>{{ student.brand }}</div>
+    <div>{{ student.age }}</div>
+    <button (click)="delete(student)">delete</button>
+  </div>
+</div>

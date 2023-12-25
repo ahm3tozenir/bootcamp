@@ -1,0 +1,51 @@
+.wrapper {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  & .row {
+    display: flex;
+    gap: 20px;
+    button {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      border: none;
+      display: none;
+      transition: 0.3s ease-in-out;
+      border-radius: 50%;
+    }
+    &:hover {
+      button {
+        display: block;
+      }
+      button:hover {
+        scale: 1.1;
+        box-shadow: 0 0 5px 5px gray;
+      }
+    }
+    & > div {
+      text-align: center;
+      width: 100px;
+      height: 50px;
+      border-bottom: 2px solid black;
+    }
+    & input {
+      width: 75%;
+    }
+  }
+}
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: greenyellow;
+  border: none;
+  color: black;
+  transition: 0.3s ease-in-out all;
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    color: greenyellow;
+    box-shadow: 0 0 5px 5px greenyellow;
+  }
+}
