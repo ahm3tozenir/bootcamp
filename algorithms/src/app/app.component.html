@@ -1,0 +1,387 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">How Many Algorithm should I do?</h2>
+      <input type="number" [(ngModel)]="count" class="form-control" />
+      <div>Daily Algorithm Counts = {{ howMany(count) | json }}</div>
+      <p>Total = {{ totalAlg(howMany(count)) }}</p>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="assets/howmany.png" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Remove First and Last Character</h2>
+      <p>
+        It's pretty straightforward. Your goal is to create a function that
+        removes the first and last characters of a string. You're given one
+        parameter, the original string. You don't have to worry with strings
+        with less than two characters.
+      </p>
+      <input type="text" class="form-control" [(ngModel)]="text" />
+      <div>Result = {{ removeChar(text) }}</div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="assets/alg2.png" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Triple Trouble</h2>
+      <p>
+        Create a function that will return a string that combines all of the
+        letters of the three inputed strings in groups. Taking the first letter
+        of all of the inputs and grouping them next to each other. Do this for
+        every letter, see example below! E.g. Input: "aa", "bb" , "cc" =>
+        Output: "abcabc" Note: You can expect all of the inputs to be the same
+        length.
+      </p>
+      <h3>result</h3>
+      <div>{{ tripleTrouble("aa", "bb", "cc") }}</div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="assets/alg3.png" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Two numbers are positive</h2>
+      <p>
+        Your job is to write a function, which takes three integers a, b, and c
+        as arguments, and returns True if exactly two of of the three integers
+        are positive numbers (greater than zero), and False - otherwise.
+      </p>
+
+      <h3>result</h3>
+      <div>{{ twoArePositive(2, 3, -1) }}</div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="assets/alg4.png" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Sum of Multiples</h2>
+      <pre>
+        Your Job
+        Find the sum of all multiples of n below m
+        
+        Keep in Mind
+        n and m are natural numbers (positive integers)
+        m is excluded from the multiples
+        Examples
+      </pre>
+      <code>
+        sumMul(2, 9) ==> 2 + 4 + 6 + 8 = 20 sumMul(3, 13) ==> 3 + 6 + 9 + 12 =
+        30 sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860 sumMul(4, -7) ==>
+        "INVALID"
+      </code>
+
+      <h3>result</h3>
+      <div>{{ sumMul(4, 210) }}</div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="assets/alg5.png" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Suzuki needs help lining up his students!</h2>
+      <p>
+        DESCRIPTION: Suzuki needs help lining up his students! Today Suzuki will
+        be interviewing his students to ensure they are progressing in their
+        training. He decided to schedule the interviews based on the length of
+        the students name in descending order. The students will line up and
+        wait for their turn. You will be given a string of student names. Sort
+        them and return a list of names in descending order. Here is an example
+        input:
+      </p>
+      <code>
+        string = 'Tadashi Takahiro Takao Takashi Takayuki Takehiko Takeo Takeshi
+        Takeshi'
+      </code>
+      <p>Here is an example return from your function:</p>
+      <code>
+        lst = ['Takehiko', 'Takayuki', 'Takahiro', 'Takeshi', 'Takeshi',
+        'Takashi', 'Tadashi', 'Takeo', 'Takao']</code
+      >
+      <p>
+        Names of equal length will be returned in reverse alphabetical order
+        (Z->A) such that:
+      </p>
+      <code>string = "xxa xxb xxc xxd xa xb xc xd"</code>
+      <p>Returns</p>
+      <code>['xxd', 'xxc', 'xxb', 'xxa', 'xd', 'xc', 'xb', 'xa']</code>
+
+      <h3>result</h3>
+      <div>
+        {{
+          lineupStudents(
+            "Tadashi Takahiro Takao Takashi Takayuki Takehiko Takeo Takeshi Takeshi"
+          ) | json
+        }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Remove duplicates from list</h2>
+      <p>
+        DESCRIPTION: Define a function that removes duplicates from an array of
+        non negative numbers and returns it as a result. The order of the
+        sequence has to stay the same. Examples:
+      </p>
+      <code>
+        Input -> Output [1, 1, 2] -> [1, 2] [1, 2, 1, 1, 3, 2] -> [1, 2, 3]
+      </code>
+
+      <h3>result</h3>
+      <div>
+        {{ distinct([1, 2, 1, 1, 3, 2]) | json }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Find the capitals</h2>
+      <p>
+        DESCRIPTION: Instructions Write a function that takes a single string
+        (word) as argument. The function must return an ordered list containing
+        the indexes of all capital letters in the string. Example (Input -->
+        Output)
+      </p>
+      <code> "CodEWaRs" --> [0,3,4,6] </code>
+
+      <h3>result</h3>
+      <div>
+        {{ capitals("CodEWaRs") | json }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Leap Years</h2>
+      <p>
+        DESCRIPTION: In this kata you should simply determine, whether a given
+        year is a leap year or not. In case you don't know the rules, here they
+        are: Years divisible by 4 are leap years, but years divisible by 100 are
+        not leap years, but years divisible by 400 are leap years. Tested years
+        are in range 1600 ≤ year ≤ 4000.
+      </p>
+
+      <h3>result</h3>
+      <div>
+        {{ isLeapYear(2000) | json }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Jaden Casing Strings</h2>
+      <p>
+        DESCRIPTION: Jaden Smith, the son of Will Smith, is the star of films
+        such as The Karate Kid (2010) and After Earth (2013). Jaden is also
+        known for some of his philosophy that he delivers via Twitter. When
+        writing on Twitter, he is known for almost always capitalizing every
+        word. For simplicity, you'll have to capitalize each word, check out how
+        contractions are expected to be in the example below. Your task is to
+        convert strings to how they would be written by Jaden Smith. The strings
+        are actual quotes from Jaden Smith, but they are not capitalized in the
+        same way he originally typed them. Example:
+      </p>
+      <code
+        >Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+        Jaden-Cased: "How Can Mirrors Be Real If Our Eyes Aren't Real"</code
+      >
+
+      <h3>result</h3>
+      <div>
+        {{ jadenCasing("How can mirrors be real if our eyes aren't real") }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Transpose two strings in an array</h2>
+      <p>
+        DESCRIPTION: You will be given an array that contains two strings. Your
+        job is to create a function that will take those two strings and
+        transpose them, so that the strings go from top to bottom instead of
+        left to right.
+      </p>
+      <pre>
+e.g. transposeTwoStrings(['Hello','World']);
+
+        should return
+        
+        H W  
+        e o  
+        l r  
+        l l  
+        o d</pre
+      >
+      <p>
+        A few things to note: There should be one space in between the two
+        characters You don't have to modify the case (i.e. no need to change to
+        upper or lower) If one string is longer than the other, there should be
+        a space where the character would be
+      </p>
+
+      <h3>result</h3>
+      <div>
+        {{ transposeTwoStrings(["Hello", "World"]) | json }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Is this a valid Chess960 position?</h2>
+      <pre>
+        DESCRIPTION:
+        Fischer random chess, also known as Chess960, is a variant of chess, invented by Bobby Fischer on June 19, 1996.
+        
+        The rules are the same as regular chess, but the starting position is randomized according to the randomization rules (see below). Note that prior knowledge of chess is not required to solve this kata, however some basic knowledge like piece distribution, initial setup, ranks vs files etc. is assumed. Here is a quick refresher.
+        
+        Randomization Rules
+        
+        The 2nd and 7th rank stay the same as in a normal game, filled with pawns.
+        All the remaining white pieces must be on the 1st rank, and black pieces on the 8th rank.
+        The two bishops must start on differently colored squares.
+        The rooks must be located on either side of the king; in other words, the king must be placed on a square between the two rooks.
+        The queen and knights can be located on any remaining square in the rank.
+        Both White and Black share the same starting position, drawn at random, in accordance to these rules.
+        
+        Side note: in accordance with these rules, there are a total of 960 possible starting positions, hence the name of the variant.
+        
+        Representation of position
+        
+        For the purpose of this kata:
+        
+        Rooks are abbreviated as R
+        Knights are abbreviated as N
+        Bishops are abbreviated as B
+        Queen is abbreviated as Q
+        King is abbreviated as K
+        Since black mirrors white's setup, it is enough to list White's position to fully describe the position. Furthermore, only the first rank needs to be defined, as the second rank is filled with pawns regardless of situation.
+        
+        A starting position is represented by an 8 character long String. Each character in the String denotes a specific piece, in order from left-to-right.
+        
+        An example starting position would be: RNBQKBNR
+        
+        Your task
+        Given a string representation, determine whether it represents a valid Chess960 starting position. Note that the input is guaranteed to represent one king, one queen, two rooks, two bishops and two knights, in some order. You do not have to validate for missing pieces or extra pieces.
+      </pre>
+
+      <h3>result</h3>
+      <div>
+        {{ isValidChess960("RNBQKBNR") }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Two Sum</h2>
+      <p>
+        DESCRIPTION: Write a function that takes an array of numbers (integers
+        for the tests) and a target number. It should find two different items
+        in the array that, when added together, give the target value. The
+        indices of these items should then be returned in a tuple / list
+        (depending on your language) like so: (index1, index2). For the purposes
+        of this kata, some tests may have multiple answers; any valid solutions
+        will be accepted. The input will always be valid (numbers will be an
+        array of length 2 or greater, and all of the items will be numbers;
+        target will always be the sum of two different items from that array).
+      </p>
+      <code>twoSum(List(1, 2, 3), 4) // (0, 2) or (2, 0)</code>
+
+      <h3>result</h3>
+      <div>
+        {{ twoSum([1234, 5678, 9012], 14690) | json }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Array.diff</h2>
+      <p>
+        DESCRIPTION: Your goal in this kata is to implement a difference
+        function, which subtracts one list from another and returns the result.
+        It should remove all values from list a, which are present in list b
+        keeping their order.
+      </p>
+      <code>arrayDiff(Seq(1, 2), Seq(1)) == Seq(2)</code>
+      <p>
+        If a value is present in b, all of its occurrences must be removed from
+        the other:
+      </p>
+      <code>arrayDiff(Seq(1, 2, 2, 2, 2, 2, 3), Seq(2)) == Seq(1, 3)</code>
+
+      <h3>result</h3>
+      <div>
+        {{ arrayDiff([1, 2, 2, 2, 2, 2, 3], [2]) | json }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Valid Parentheses</h2>
+      <p>
+        DESCRIPTION: Write a function that takes a string of parentheses, and
+        determines if the order of the parentheses is valid. The function should
+        return true if the string is valid, and false if it's invalid. Examples
+      </p>
+      <pre>
+        "()"              =>  true
+        ")(()))"          =>  false
+        "("               =>  false
+        "(())((()())())"  =>  true
+      </pre>
+      <pre>
+        Constraints
+        0 <= length of input <= 100
+
+        All inputs will be strings, consisting only of characters ( and ).
+        Empty strings are considered balanced (and therefore valid), and will be tested.
+        For languages with mutable strings, the inputs should not be mutated.
+
+        Protip: If you are trying to figure out why a string of parentheses is invalid, paste the parentheses into the code editor, and let the code highlighting show you!
+      </pre>
+
+      <h3>result</h3>
+      <div>
+        {{ validParentheses("(())((()())())") }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="" alt="" />
+    </div>
+  </div>
+</div>
