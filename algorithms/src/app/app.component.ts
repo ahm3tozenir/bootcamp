@@ -193,4 +193,45 @@ export class AppComponent {
     }
     return count == 0;
   }
+  validBraces(braces: string) {
+    let str = '';
+    while (braces.length != str.length) {
+      str = braces;
+      braces = braces.replace('()', '').replace('[]', '').replace('{}', '');
+    }
+    return braces.length == 0;
+  }
+  solution(number: number) {
+    let nums = [];
+    for (let i = 1; i < number; i++) {
+      if (i % 3 == 0 || i % 5 == 0) {
+        nums.push(i);
+      }
+    }
+    let initial = 0;
+    let sumOfNums = nums.reduce((e, acc) => e + acc, initial);
+    return sumOfNums;
+  }
+  highAndLow(numbers: string) {
+    let arr = numbers.split(' ');
+    let num = [];
+    for (let i of arr) {
+      num.push(Number(i));
+    }
+    let max = Math.max(...num);
+    let min = Math.min(...num);
+    let result = `${max} ${min}`;
+    return result;
+  }
+  spinWords(string: string) {
+    const splited = string.split(' ');
+    let arr = [];
+    for (let i = 0; i < splited.length; i++) {
+      if (splited[i].length >= 5) {
+        splited[i] = splited[i].split('').reverse().join('');
+      }
+      arr.push(splited[i]);
+    }
+    return arr.join(' ');
+  }
 }

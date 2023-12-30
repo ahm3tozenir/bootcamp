@@ -384,4 +384,100 @@ e.g. transposeTwoStrings(['Hello','World']);
       <img src="" alt="" />
     </div>
   </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Valid Braces</h2>
+      <p>
+        DESCRIPTION: Write a function that takes a string of braces, and
+        determines if the order of the braces is valid. It should return true if
+        the string is valid, and false if it's invalid. This Kata is similar to
+        the Valid Parentheses Kata, but introduces new characters: What is
+        considered Valid? A string of braces is considered valid if all braces
+        are matched with the correct brace. Examples
+      </p>
+      <code>()[] => True</code>
+      <code>"[(])" => False </code>
+
+      <h3>result</h3>
+      <div>
+        {{ validBraces("([{}])") }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="assets/alg16.png" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Multiples of 3 or 5</h2>
+      <p>
+        If we list all the natural numbers below 10 that are multiples of 3 or
+        5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Finish the
+        solution so that it returns the sum of all the multiples of 3 or 5 below
+        the number passed in. Additionally, if the number is negative, return 0.
+        Note: If the number is a multiple of both 3 and 5, only count it once.
+      </p>
+
+      <h3>result</h3>
+      <div>
+        {{ solution(10) }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="assets/alg17.png" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Highest and Lowest</h2>
+      <p>
+        DESCRIPTION: In this little assignment you are given a string of space
+        separated numbers, and have to return the highest and lowest number.
+        Examples
+      </p>
+      <pre>
+        highAndLow("1 2 3 4 5");  // return "5 1"
+        highAndLow("1 2 -3 4 5"); // return "5 -3"
+        highAndLow("1 9 3 4 -5"); // return "9 -5"
+      </pre>
+      <p>
+        Notes All numbers are valid Int32, no need to validate them. There will
+        always be at least one number in the input string. Output string must be
+        two numbers separated by a single space, and highest number is first.
+      </p>
+
+      <h3>result</h3>
+      <div>
+        {{ highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4") }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="assets/alg18.png" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border border-3 rounded my-2 py-2">
+      <h2 class="fw-bold">Stop gninnipS My sdroW!</h2>
+      <p>
+        DESCRIPTION: Write a function that takes in a string of one or more
+        words, and returns the same string, but with all words that have five or
+        more letters reversed (Just like the name of this Kata). Strings passed
+        in will consist of only letters and spaces. Spaces will be included only
+        when more than one word is present. Examples:
+      </p>
+      <pre>
+        "Hey fellow warriors"  --> "Hey wollef sroirraw" 
+        "This is a test        --> "This is a test" 
+        "This is another test" --> "This is rehtona test"
+      </pre>
+
+      <h3>result</h3>
+      <div>
+        {{ spinWords("Hey fellow warriors") }}
+      </div>
+    </div>
+    <div class="col-6 my-2 py-2">
+      <img src="assets/alg19.png" alt="" />
+    </div>
+  </div>
 </div>
