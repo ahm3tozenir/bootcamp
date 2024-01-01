@@ -1,0 +1,44 @@
+<div class="container mt-3">
+  <div class="row row-cols-3">
+    <div class="card-group" *ngFor="let product of products">
+      <div class="card mb-4">
+        <div class="card-header text-truncate">{{ product.title }}</div>
+        <img
+          class="card-img-top p-5"
+          src="{{ product.image }}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <p class="card-text text-body-secondary text-truncate">
+            {{ product.description }}
+          </p>
+          <p class="card-text">{{ product.price | currency }}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+          <div class="w-50 gap-2 d-flex">
+            <button
+              class="btn btn-secondary"
+              (click)="getProductService().decreaseQuantity(product)"
+            >
+              -
+            </button>
+            <input
+              class="form-control w-35 d-inline"
+              type="number"
+              [(ngModel)]="product.quantity"
+            />
+            <button
+              class="btn btn-secondary"
+              (click)="getProductService().increaseQuantity(product)"
+            >
+              +
+            </button>
+          </div>
+          <button class="btn btn-outline-success" (click)="addToCart(product)">
+            Buy
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
